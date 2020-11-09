@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using EnvDTE;
 using Microsoft;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Threading;
