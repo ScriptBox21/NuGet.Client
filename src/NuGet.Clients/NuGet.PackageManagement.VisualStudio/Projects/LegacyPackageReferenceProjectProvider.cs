@@ -88,11 +88,6 @@ namespace NuGet.PackageManagement.VisualStudio
         {
             var componentModel = await _componentModel.GetValueAsync();
 
-            // Check for RestoreProjectStyle property
-            var restoreProjectStyle = await vsProjectAdapter.BuildProperties.GetPropertyValueAsync(
-                ProjectBuildProperties.RestoreProjectStyle);
-
-<<<<<<< HEAD
             var asVSProject4 = vsProjectAdapter.Project.Object as VSProject4;
 
             // A legacy CSProj must cast to VSProject4 to manipulate package references
@@ -100,8 +95,13 @@ namespace NuGet.PackageManagement.VisualStudio
             {
                 return null;
             }
-                // For legacy csproj, either the RestoreProjectStyle must be set to PackageReference or
-                // project has atleast one package dependency defined as PackageReference
+
+            // Check for RestoreProjectStyle property
+            var restoreProjectStyle = await vsProjectAdapter.BuildProperties.GetPropertyValueAsync(
+                ProjectBuildProperties.RestoreProjectStyle);
+
+            // For legacy csproj, either the RestoreProjectStyle must be set to PackageReference or
+            // project has atleast one package dependency defined as PackageReference
             if (forceCreate
                 || PackageReference.Equals(restoreProjectStyle, StringComparison.OrdinalIgnoreCase)
                 || (asVSProject4.PackageReferences?.InstalledPackages?.Length ?? 0) > 0)
