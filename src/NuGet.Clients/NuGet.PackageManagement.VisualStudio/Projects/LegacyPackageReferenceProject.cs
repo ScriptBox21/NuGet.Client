@@ -284,7 +284,7 @@ namespace NuGet.PackageManagement.VisualStudio
             return UriUtility.GetAbsolutePathFromFile(_projectFullPath, packagePath);
         }
 
-        private IList<PackageSource> GetSources(ISettings settings, bool shouldThrow = true)
+        private IList<PackageSource> GetSources(ISettings settings)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

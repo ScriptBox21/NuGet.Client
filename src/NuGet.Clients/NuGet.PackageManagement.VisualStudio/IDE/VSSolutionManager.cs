@@ -303,7 +303,7 @@ namespace NuGet.PackageManagement.VisualStudio
         private static bool IsRestoredOnSolutionLoad(NuGetProject nuGetProject)
         {
             if (nuGetProject is CpsPackageReferenceProject)
-            { 
+            {
                 return true;
             }
             if (nuGetProject is LegacyPackageReferenceProject legacyPackageReferenceProject)
