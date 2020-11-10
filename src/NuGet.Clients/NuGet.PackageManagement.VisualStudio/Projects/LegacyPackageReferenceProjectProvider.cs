@@ -106,7 +106,7 @@ namespace NuGet.PackageManagement.VisualStudio
                 || PackageReference.Equals(restoreProjectStyle, StringComparison.OrdinalIgnoreCase)
                 || (asVSProject4.PackageReferences?.InstalledPackages?.Length ?? 0) > 0)
             {
-                var nominatesOnSolutionLoad = await vsProjectAdapter.IsCapabilityMatchAsync(NuGet.VisualStudio.IDE.ProjectCapabilities.PackageReferences)));
+                var nominatesOnSolutionLoad = await vsProjectAdapter.IsCapabilityMatchAsync(NuGet.VisualStudio.IDE.ProjectCapabilities.PackageReferences);
                 return CreateCoreProjectSystemServices(vsProjectAdapter, componentModel, nominatesOnSolutionLoad);
             }
 
