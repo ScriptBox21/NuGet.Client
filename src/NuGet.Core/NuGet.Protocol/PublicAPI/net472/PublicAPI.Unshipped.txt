@@ -1,6 +1,8 @@
 NuGet.Protocol.Core.Types.IPackageSearchMetadata.Vulnerabilities.get -> System.Collections.Generic.IEnumerable<NuGet.Protocol.PackageVulnerabilityMetadata>
 NuGet.Protocol.Core.Types.PackageSearchMetadataBuilder.ClonedPackageSearchMetadata.Vulnerabilities.get -> System.Collections.Generic.IEnumerable<NuGet.Protocol.PackageVulnerabilityMetadata>
 NuGet.Protocol.Core.Types.PackageSearchMetadataBuilder.ClonedPackageSearchMetadata.Vulnerabilities.set -> void
+NuGet.Protocol.LocalPackageInfo.LocalPackageInfo(NuGet.Packaging.Core.PackageIdentity identity, string path, System.DateTime lastWriteTimeUtc, System.Lazy<NuGet.Packaging.NuspecReader> nuspec) -> void
+NuGet.Protocol.LocalPackageSearchMetadata.PackagePath.get -> string
 NuGet.Protocol.LocalPackageSearchMetadata.Vulnerabilities.get -> System.Collections.Generic.IEnumerable<NuGet.Protocol.PackageVulnerabilityMetadata>
 NuGet.Protocol.PackageSearchMetadata.Vulnerabilities.get -> System.Collections.Generic.IEnumerable<NuGet.Protocol.PackageVulnerabilityMetadata>
 NuGet.Protocol.PackageSearchMetadataV2Feed.Vulnerabilities.get -> System.Collections.Generic.IEnumerable<NuGet.Protocol.PackageVulnerabilityMetadata>
