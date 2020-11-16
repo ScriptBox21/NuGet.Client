@@ -375,8 +375,8 @@ namespace NuGet.PackageManagement.VisualStudio
             {
                 packageFeeds.mainFeed = new UpdatePackageFeed(
                     _serviceBroker,
-                    installedPackageCollection, 
-                    metadataProvider, 
+                    installedPackageCollection,
+                    metadataProvider,
                     projectContextInfos.ToArray());
 
                 return packageFeeds;
